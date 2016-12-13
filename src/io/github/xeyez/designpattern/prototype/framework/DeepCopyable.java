@@ -2,6 +2,6 @@ package io.github.xeyez.designpattern.prototype.framework;
 
 import java.io.Serializable;
 
-public interface DeepCopyable<T> extends Serializable, Cloneable {
+public interface DeepCopyable<T> extends Serializable {
 	T deepCopy();
 }
