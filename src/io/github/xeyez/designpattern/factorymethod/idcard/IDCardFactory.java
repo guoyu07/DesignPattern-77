@@ -17,9 +17,6 @@ public class IDCardFactory extends AbstractFactory {
 
 	@Override
 	protected void registerProduct(AbstractProduct product) {
-		if(!(product instanceof IDCard))
-			return;
-		
 		owners.add(((IDCard)product).getOwner());
 	}
 
