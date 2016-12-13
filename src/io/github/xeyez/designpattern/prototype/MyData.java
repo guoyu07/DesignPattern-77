@@ -22,9 +22,4 @@ public class MyData implements DeepCopyable<MyData>{
 	public MyData deepCopy() {
 		return PrototypeManager.deepCopy(this);
 	}
-
-	@Override
-	public Object clone() throws CloneNotSupportedException {
-		return super.clone();
-	}
 }
