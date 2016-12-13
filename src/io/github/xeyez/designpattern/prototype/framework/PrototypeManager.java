@@ -8,16 +8,19 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.HashMap;
 
-public class PrototypeManager {
+import javax.swing.plaf.basic.BasicInternalFrameTitlePane.IconifyAction;
+
+public class PrototypeManager<T extends DeepCopyable<T>> {
 	private HashMap<String, DeepCopyable<?>> showcase = new HashMap<>();
 
 	public void register(String name, DeepCopyable<?> prototype) {
 		showcase.put(name, prototype);
 	}
 
-	public DeepCopyable<?> create(String name) {
+	@SuppressWarnings("unchecked")
+	public T create(String name) {
 		DeepCopyable<?> prototype = showcase.get(name);
-		return (DeepCopyable<?>) prototype.deepCopy();
+		return (T) prototype.deepCopy();
 	}
 	
 	@SuppressWarnings("unchecked")

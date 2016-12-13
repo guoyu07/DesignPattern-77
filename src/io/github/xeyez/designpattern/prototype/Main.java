@@ -4,12 +4,12 @@ import io.github.xeyez.designpattern.prototype.framework.PrototypeManager;
 
 public class Main {
 	public static void main(String[] args) {
-		PrototypeManager manager = new PrototypeManager();
+		PrototypeManager<MyData> manager = new PrototypeManager<>();
 		
 		manager.register("myPrototype", new MyData());
 		
-		MyData p1 = (MyData) manager.create("myPrototype");
-		MyData p2 = (MyData) manager.create("myPrototype");
+		MyData p1 = manager.create("myPrototype");
+		MyData p2 = manager.create("myPrototype");
 		
 		/* Verify "Deep copy" */
 		System.out.println(p1 == p2);
