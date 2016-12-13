@@ -7,10 +7,10 @@ import java.util.Date;
 import io.github.xeyez.designpattern.prototype.framework.DeepCopyable;
 import io.github.xeyez.designpattern.prototype.framework.PrototypeManager;
 
-public class MyData implements DeepCopyable<MyData>{
+public class MyData implements DeepCopyable<MyData> {
 
 	private static final long serialVersionUID = 1L;
-	
+
 	public Date date = new Date();
 	public SubClass subClass = new SubClass();
 

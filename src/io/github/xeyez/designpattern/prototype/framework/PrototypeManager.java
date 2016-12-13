@@ -8,8 +8,6 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.HashMap;
 
-import javax.swing.plaf.basic.BasicInternalFrameTitlePane.IconifyAction;
-
 public class PrototypeManager<T extends DeepCopyable<T>> {
 	private HashMap<String, DeepCopyable<?>> showcase = new HashMap<>();
 
